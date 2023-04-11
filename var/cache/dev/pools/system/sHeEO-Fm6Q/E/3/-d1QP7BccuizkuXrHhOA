@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CTestQs
+
+return [PHP_INT_MAX, []];

@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CTests%2524minPoints
+
+return [PHP_INT_MAX, []];
