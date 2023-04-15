@@ -88,79 +88,92 @@ class __TwigTemplate_ee8aec42a17e563e372709b56fd55c67 extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["test"]) || array_key_exists("test", $context) ? $context["test"] : (function () { throw new RuntimeError('Variable "test" does not exist.', 19, $this->source); })()), "duration", [], "any", false, false, false, 19), "html", null, true);
         echo ":00</li>
 \t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<input hidden type=\"text\" id=\"testId\" value=";
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["test"]) || array_key_exists("test", $context) ? $context["test"] : (function () { throw new RuntimeError('Variable "test" does not exist.', 21, $this->source); })()), "id", [], "any", false, false, false, 21), "html", null, true);
+        echo ">
 \t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
-        // line 23
+        // line 24
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (twig_length_filter($this->env, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 23, $this->source); })())) - 1)));
+        $context['_seq'] = twig_ensure_traversable(range(0, (twig_length_filter($this->env, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 24, $this->source); })())) - 1)));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 24
+            // line 25
             echo "\t\t\t\t\t\t\t<div class=\"card\">
 \t\t\t\t\t\t\t\t<div class=\"card-body p-4\">
 
 \t\t\t\t\t\t\t\t\t<div class=\"list-group list-group-flush \">
 \t\t\t\t\t\t\t\t\t\t<label class=\"fw-semibold fs-4\" for=\"question\">";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 28, $this->source); })()), $context["i"], [], "array", false, false, false, 28), "question", [], "any", false, false, false, 28), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 29, $this->source); })()), $context["i"], [], "array", false, false, false, 29), "question", [], "any", false, false, false, 29), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t<br>
+
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question";
-            // line 31
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"";
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 33, $this->source); })()), $context["i"], [], "array", false, false, false, 33), "id", [], "any", false, false, false, 33), "html", null, true);
+            echo "\" class=\"form-check-input\" type=\"radio\" name=\"question";
             echo twig_escape_filter($this->env, $context["i"], "html", null, true);
-            echo "\" value=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 31, $this->source); })()), $context["i"], [], "array", false, false, false, 31), "optiona", [], "any", false, false, false, 31), "html", null, true);
-            echo ">
+            echo "\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 33, $this->source); })()), $context["i"], [], "array", false, false, false, 33), "optiona", [], "any", false, false, false, 33), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 32, $this->source); })()), $context["i"], [], "array", false, false, false, 32), "optiona", [], "any", false, false, false, 32), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 34, $this->source); })()), $context["i"], [], "array", false, false, false, 34), "optiona", [], "any", false, false, false, 34), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question";
-            // line 35
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"";
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 37, $this->source); })()), $context["i"], [], "array", false, false, false, 37), "id", [], "any", false, false, false, 37), "html", null, true);
+            echo "\" class=\"form-check-input\" type=\"radio\" name=\"question";
             echo twig_escape_filter($this->env, $context["i"], "html", null, true);
-            echo "\" value=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 35, $this->source); })()), $context["i"], [], "array", false, false, false, 35), "optionb", [], "any", false, false, false, 35), "html", null, true);
-            echo ">
+            echo "\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 37, $this->source); })()), $context["i"], [], "array", false, false, false, 37), "optionb", [], "any", false, false, false, 37), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 36, $this->source); })()), $context["i"], [], "array", false, false, false, 36), "optionb", [], "any", false, false, false, 36), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 38, $this->source); })()), $context["i"], [], "array", false, false, false, 38), "optionb", [], "any", false, false, false, 38), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question";
-            // line 39
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 41, $this->source); })()), $context["i"], [], "array", false, false, false, 41), "id", [], "any", false, false, false, 41), "html", null, true);
+            echo "\" class=\"form-check-input\" type=\"radio\" name=\"question";
             echo twig_escape_filter($this->env, $context["i"], "html", null, true);
-            echo "\" value=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 39, $this->source); })()), $context["i"], [], "array", false, false, false, 39), "optionc", [], "any", false, false, false, 39), "html", null, true);
-            echo ">
+            echo "\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 41, $this->source); })()), $context["i"], [], "array", false, false, false, 41), "optionc", [], "any", false, false, false, 41), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 40, $this->source); })()), $context["i"], [], "array", false, false, false, 40), "optionc", [], "any", false, false, false, 40), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 42, $this->source); })()), $context["i"], [], "array", false, false, false, 42), "optionc", [], "any", false, false, false, 42), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question";
-            // line 43
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"";
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 45, $this->source); })()), $context["i"], [], "array", false, false, false, 45), "id", [], "any", false, false, false, 45), "html", null, true);
+            echo "\" class=\"form-check-input\" type=\"radio\" name=\"question";
             echo twig_escape_filter($this->env, $context["i"], "html", null, true);
-            echo "\" value=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 43, $this->source); })()), $context["i"], [], "array", false, false, false, 43), "optiond", [], "any", false, false, false, 43), "html", null, true);
-            echo ">
+            echo "\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 45, $this->source); })()), $context["i"], [], "array", false, false, false, 45), "optiond", [], "any", false, false, false, 45), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 44, $this->source); })()), $context["i"], [], "array", false, false, false, 44), "optiond", [], "any", false, false, false, 44), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 46, $this->source); })()), $context["i"], [], "array", false, false, false, 46), "optiond", [], "any", false, false, false, 46), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio\">
 \t\t\t\t\t\t\t\t\t\t\t<label hidden><input type=\"radio\" name=\"question";
-            // line 47
+            // line 49
             echo twig_escape_filter($this->env, $context["i"], "html", null, true);
-            echo "\" value=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 47, $this->source); })()), $context["i"], [], "array", false, false, false, 47), "correctOption", [], "any", false, false, false, 47), "html", null, true);
-            echo " id=\"correctOption\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 47, $this->source); })()), $context["i"], [], "array", false, false, false, 47), "correctOption", [], "any", false, false, false, 47), "html", null, true);
+            echo "\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 49, $this->source); })()), $context["i"], [], "array", false, false, false, 49), "correctOption", [], "any", false, false, false, 49), "html", null, true);
+            echo "\" id=\"correctOption\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["q"]) || array_key_exists("q", $context) ? $context["q"] : (function () { throw new RuntimeError('Variable "q" does not exist.', 49, $this->source); })()), $context["i"], [], "array", false, false, false, 49), "correctOption", [], "any", false, false, false, 49), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -173,7 +186,7 @@ class __TwigTemplate_ee8aec42a17e563e372709b56fd55c67 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 57
         echo "\t\t\t\t\t\t<button id=\"btn\" type=\"submit\" class=\"btn btn-info\" onclick=\"terminer_test(); \">Terminer test</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t<!-- end col -->
@@ -193,14 +206,19 @@ class __TwigTemplate_ee8aec42a17e563e372709b56fd55c67 extends Template
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body bg-light \">
 \t\t\t\t\t\t<p id=\"nb_questions\" data-nb=";
-        // line 73
-        echo twig_escape_filter($this->env, (isset($context["nb_questions"]) || array_key_exists("nb_questions", $context) ? $context["nb_questions"] : (function () { throw new RuntimeError('Variable "nb_questions" does not exist.', 73, $this->source); })()), "html", null, true);
+        // line 75
+        echo twig_escape_filter($this->env, (isset($context["nb_questions"]) || array_key_exists("nb_questions", $context) ? $context["nb_questions"] : (function () { throw new RuntimeError('Variable "nb_questions" does not exist.', 75, $this->source); })()), "html", null, true);
         echo "></p>
 \t\t\t\t\t\t<p>Félicitations pour avoir terminé le test !</p>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-danger  col-6 mx-auto\" data-bs-dismiss=\"modal\" onclick=\"redirect()\">Quitter</button>
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary col-6 mx-auto \">Imprimer</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" data-bs-dismiss=\"modal\" onclick=\"redirect()\">Quitter</button>
+\t\t\t\t\t\t<a href=\"";
+        // line 80
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("resultDownload");
+        echo "\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary \">Imprimer</button>
+\t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -240,26 +258,42 @@ event.preventDefault()
 
 let score = 0;
 let radioCount = 0;
-
+// nombre des questions
 let nbQuestionsEl = document.getElementById('nb_questions');
 let nbQuestions = parseInt(nbQuestionsEl.getAttribute('data-nb'));
+
+// les réponses correctes
+let correctOptions = document.querySelectorAll('input[id=\"correctOption\"]');
+
+let limit = nbQuestions;
+let finishBtn = document.getElementById(\"btn\");
+
 console.log(nbQuestions);
 
 
 function terminer_test() {
+var modal = new bootstrap.Modal(document.getElementById(\"staticBackdrop\"));
+// valeurs selectionnées
+let selectedValues = document.querySelectorAll('input[type=\"radio\"]:checked');
+let selectedValuesArray = Array.from(selectedValues)
 
-const limit = nbQuestions;
-const finishBtn = document.getElementById(\"btn\");
-const correctOptions = document.querySelectorAll('input[id=\"correctOption\"]');
-var selectedValues = document.querySelectorAll('input[type=\"radio\"]:checked');
-var checkbtn = document.querySelectorAll('input[type=\"radio\"]');
+let correctOptionsArray = Array.from(correctOptions)
 
-selectedValues.forEach(selectedValue => {
-correctOptions.forEach(option => {
 
-if (selectedValue.value.toString() === option.value.toString()) 
+if (selectedValues.length != nbQuestions) 
+
+toggleErrorModal()
+
+
+
+
+
+for (let i = 0; i < nbQuestions; i++) {
+if (selectedValuesArray[i].value.toString() === correctOptionsArray[i].value.toString()) {
+console.log(selectedValuesArray[i].value)
+console.log(correctOptionsArray[i].value)
 score++;
-
+}
 
 
 if (score > limit) 
@@ -267,49 +301,53 @@ score = limit;
 
 
 
-})
-
-});
-
-checkbtn.forEach((btn) => {
-if (btn.checked) {
-radioCount++;
-if (radioCount > limit) 
-radioCount = limit;
-
-
-
 }
 
+\$
+let responses = [];
+for (let i = 0; i < selectedValuesArray.length; i++) {
+console.log(selectedValuesArray[i].id)
+responses[i] = {
+id: selectedValuesArray[i].id,
+value: selectedValuesArray[i].value
+}
+}
 
-});
+console.log(document.getElementById('testId').value)
+console.log(responses)
 
-if (radioCount === nbQuestions) {
+
+if (selectedValues.length === nbQuestions) { /*
 finishBtn.setAttribute('data-bs-toggle', 'modal');
-finishBtn.setAttribute('data-bs-target', '#staticBackdrop');
-}
-console.log(nbQuestions)
-console.log('score' + score);
-console.log('selected' + radioCount);
-
-var modal = new bootstrap.Modal(document.getElementById(\"staticBackdrop\"));
-if (radioCount === nbQuestions)  // all the questions are answered
+finishBtn.setAttribute('data-bs-target', '#staticBackdrop'); */
+\$.post('/check/' + document.getElementById('testId').value, responses).then(function (res) {
+console.log(res)
+var resultText = `Vous avez obtenu une note de \${
+res.nbCorrectOption
+}  sur \${nbQuestions}`;
+document.getElementById('nb_questions').innerHTML = resultText;
 modal.toggle();
- else 
-toggleErrorModal()
+}).fail(function (error) { // Error code here
+console.log('Error: ' + error.responseText);
+});
 
 
+}
+
+/*
+console.log(selectedValues)
 
 
-
+// affichage message résultat
 var resultText = `Vous avez obtenu une note de \${score}  sur \${nbQuestions}`
 document.getElementById('nb_questions').innerHTML = resultText;
+*/
 
 }
 
 function redirect() {
-const newPageUrl = '";
-        // line 186
+let newPageUrl = '";
+        // line 210
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("getUserTests");
         echo "';
 window.location.href = newPageUrl;
@@ -402,7 +440,7 @@ modal.toggle();
 
     public function getDebugInfo()
     {
-        return array (  313 => 186,  197 => 73,  177 => 55,  159 => 47,  153 => 44,  147 => 43,  141 => 40,  135 => 39,  129 => 36,  123 => 35,  117 => 32,  111 => 31,  105 => 28,  99 => 24,  95 => 23,  86 => 19,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  351 => 210,  218 => 80,  210 => 75,  190 => 57,  172 => 49,  166 => 46,  158 => 45,  152 => 42,  144 => 41,  138 => 38,  130 => 37,  124 => 34,  116 => 33,  109 => 29,  103 => 25,  99 => 24,  93 => 21,  86 => 19,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -427,6 +465,7 @@ modal.toggle();
 \t\t\t\t\t\t\t<div class=\"timer\">Temps restant :
 \t\t\t\t\t\t\t\t<li class=\"fs-3 text-danger\" style=\"list-style-type: none;\" id=\"countdown\" value={{test.duration}}>{{test.duration}}:00</li>
 \t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<input hidden type=\"text\" id=\"testId\" value={{test.id}}>
 \t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t{% for i in 0..q|length-1 %}
@@ -436,24 +475,25 @@ modal.toggle();
 \t\t\t\t\t\t\t\t\t<div class=\"list-group list-group-flush \">
 \t\t\t\t\t\t\t\t\t\t<label class=\"fw-semibold fs-4\" for=\"question\">{{q[i].question}}</label>
 \t\t\t\t\t\t\t\t\t\t<br>
+
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value={{q[i].optiona}}>
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"{{q[i].id}}\" class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value=\"{{q[i].optiona}}\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">{{q[i].optiona}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value={{q[i].optionb}}>
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"{{q[i].id}}\" class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value=\"{{q[i].optionb}}\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">{{q[i].optionb}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value={{q[i].optionc}}>
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"{{q[i].id}}\" class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value=\"{{q[i].optionc}}\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">{{q[i].optionc}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio list-group-item\">
-\t\t\t\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value={{q[i].optiond}}>
+\t\t\t\t\t\t\t\t\t\t\t<input id=\"{{q[i].id}}\" class=\"form-check-input\" type=\"radio\" name=\"question{{i}}\" value=\"{{q[i].optiond}}\">
 \t\t\t\t\t\t\t\t\t\t\t<label class=\"form-check-label\">{{q[i].optiond}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"radio\">
-\t\t\t\t\t\t\t\t\t\t\t<label hidden><input type=\"radio\" name=\"question{{i}}\" value={{q[i].correctOption}} id=\"correctOption\">{{q[i].correctOption}}</label>
+\t\t\t\t\t\t\t\t\t\t\t<label hidden><input type=\"radio\" name=\"question{{i}}\" value=\"{{q[i].correctOption}}\" id=\"correctOption\">{{q[i].correctOption}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -483,8 +523,10 @@ modal.toggle();
 \t\t\t\t\t\t<p>Félicitations pour avoir terminé le test !</p>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-danger  col-6 mx-auto\" data-bs-dismiss=\"modal\" onclick=\"redirect()\">Quitter</button>
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary col-6 mx-auto \">Imprimer</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-danger\" data-bs-dismiss=\"modal\" onclick=\"redirect()\">Quitter</button>
+\t\t\t\t\t\t<a href=\"{{path('resultDownload')}}\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary \">Imprimer</button>
+\t\t\t\t\t\t</a>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -524,26 +566,42 @@ event.preventDefault()
 
 let score = 0;
 let radioCount = 0;
-
+// nombre des questions
 let nbQuestionsEl = document.getElementById('nb_questions');
 let nbQuestions = parseInt(nbQuestionsEl.getAttribute('data-nb'));
+
+// les réponses correctes
+let correctOptions = document.querySelectorAll('input[id=\"correctOption\"]');
+
+let limit = nbQuestions;
+let finishBtn = document.getElementById(\"btn\");
+
 console.log(nbQuestions);
 
 
 function terminer_test() {
+var modal = new bootstrap.Modal(document.getElementById(\"staticBackdrop\"));
+// valeurs selectionnées
+let selectedValues = document.querySelectorAll('input[type=\"radio\"]:checked');
+let selectedValuesArray = Array.from(selectedValues)
 
-const limit = nbQuestions;
-const finishBtn = document.getElementById(\"btn\");
-const correctOptions = document.querySelectorAll('input[id=\"correctOption\"]');
-var selectedValues = document.querySelectorAll('input[type=\"radio\"]:checked');
-var checkbtn = document.querySelectorAll('input[type=\"radio\"]');
+let correctOptionsArray = Array.from(correctOptions)
 
-selectedValues.forEach(selectedValue => {
-correctOptions.forEach(option => {
 
-if (selectedValue.value.toString() === option.value.toString()) 
+if (selectedValues.length != nbQuestions) 
+
+toggleErrorModal()
+
+
+
+
+
+for (let i = 0; i < nbQuestions; i++) {
+if (selectedValuesArray[i].value.toString() === correctOptionsArray[i].value.toString()) {
+console.log(selectedValuesArray[i].value)
+console.log(correctOptionsArray[i].value)
 score++;
-
+}
 
 
 if (score > limit) 
@@ -551,48 +609,52 @@ score = limit;
 
 
 
-})
-
-});
-
-checkbtn.forEach((btn) => {
-if (btn.checked) {
-radioCount++;
-if (radioCount > limit) 
-radioCount = limit;
-
-
-
 }
 
+\$
+let responses = [];
+for (let i = 0; i < selectedValuesArray.length; i++) {
+console.log(selectedValuesArray[i].id)
+responses[i] = {
+id: selectedValuesArray[i].id,
+value: selectedValuesArray[i].value
+}
+}
 
-});
+console.log(document.getElementById('testId').value)
+console.log(responses)
 
-if (radioCount === nbQuestions) {
+
+if (selectedValues.length === nbQuestions) { /*
 finishBtn.setAttribute('data-bs-toggle', 'modal');
-finishBtn.setAttribute('data-bs-target', '#staticBackdrop');
-}
-console.log(nbQuestions)
-console.log('score' + score);
-console.log('selected' + radioCount);
-
-var modal = new bootstrap.Modal(document.getElementById(\"staticBackdrop\"));
-if (radioCount === nbQuestions)  // all the questions are answered
+finishBtn.setAttribute('data-bs-target', '#staticBackdrop'); */
+\$.post('/check/' + document.getElementById('testId').value, responses).then(function (res) {
+console.log(res)
+var resultText = `Vous avez obtenu une note de \${
+res.nbCorrectOption
+}  sur \${nbQuestions}`;
+document.getElementById('nb_questions').innerHTML = resultText;
 modal.toggle();
- else 
-toggleErrorModal()
+}).fail(function (error) { // Error code here
+console.log('Error: ' + error.responseText);
+});
 
 
+}
+
+/*
+console.log(selectedValues)
 
 
-
+// affichage message résultat
 var resultText = `Vous avez obtenu une note de \${score}  sur \${nbQuestions}`
 document.getElementById('nb_questions').innerHTML = resultText;
+*/
 
 }
 
 function redirect() {
-const newPageUrl = '{{ path('getUserTests') }}';
+let newPageUrl = '{{ path('getUserTests') }}';
 window.location.href = newPageUrl;
 }
 

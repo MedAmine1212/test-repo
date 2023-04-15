@@ -114,6 +114,16 @@ class __TwigTemplate_34e577e01d6381f4c5e72a9f497333ed extends Template
 \t\t\t\t\t<i class=\"fas fa-plus\"></i>
 \t\t\t\t\tAjouter un test</a>
 \t\t\t</div>
+\t\t\t<br>
+\t\t\t<form class=\"input-group mb-3\" method=\"post\" action=\"find\">
+\t\t\t\t<input type=\"search\" class=\"form-control rounded\" id=\"name\" placeholder=\"Nom cours\" name=\"name\"/>
+\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\" value=\"search\">
+\t\t\t\t\t<i class=\"fas fa-search\"></i>
+\t\t\t\t\tChercher
+\t\t\t\t</button>
+
+
+\t\t\t</form>
 \t\t\t<div class=\"container-fluid\">
 
 \t\t\t\t<div class=\"row\">
@@ -134,34 +144,34 @@ class __TwigTemplate_34e577e01d6381f4c5e72a9f497333ed extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</thead>
 \t\t\t\t\t\t\t\t\t\t\t\t<tbody>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 49
+        // line 59
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tests"]) || array_key_exists("tests", $context) ? $context["tests"] : (function () { throw new RuntimeError('Variable "tests" does not exist.', 49, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tests"]) || array_key_exists("tests", $context) ? $context["tests"] : (function () { throw new RuntimeError('Variable "tests" does not exist.', 59, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 50
+            // line 60
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 51
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "type", [], "any", false, false, false, 51), "html", null, true);
+            // line 61
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "type", [], "any", false, false, false, 61), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "minPoints", [], "any", false, false, false, 52), "html", null, true);
+            // line 62
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "minPoints", [], "any", false, false, false, 62), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "duration", [], "any", false, false, false, 53), "html", null, true);
+            // line 63
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "duration", [], "any", false, false, false, 63), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 55
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateTest", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 55)]), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateTest", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 65)]), "html", null, true);
             echo "\" class=\"btn btn-success\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-edit\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 58
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteTest", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 58)]), "html", null, true);
+            // line 68
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteTest", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 68)]), "html", null, true);
             echo "\" class=\"btn btn-danger\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"far fa-trash-alt\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
@@ -172,7 +182,7 @@ class __TwigTemplate_34e577e01d6381f4c5e72a9f497333ed extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        // line 74
         echo "\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t\t\t\t\t\t\t</table>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -212,7 +222,7 @@ class __TwigTemplate_34e577e01d6381f4c5e72a9f497333ed extends Template
 
     public function getDebugInfo()
     {
-        return array (  176 => 64,  164 => 58,  158 => 55,  153 => 53,  149 => 52,  145 => 51,  142 => 50,  138 => 49,  112 => 26,  92 => 8,  82 => 7,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  186 => 74,  174 => 68,  168 => 65,  163 => 63,  159 => 62,  155 => 61,  152 => 60,  148 => 59,  112 => 26,  92 => 8,  82 => 7,  69 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -246,6 +256,16 @@ class __TwigTemplate_34e577e01d6381f4c5e72a9f497333ed extends Template
 \t\t\t\t\t<i class=\"fas fa-plus\"></i>
 \t\t\t\t\tAjouter un test</a>
 \t\t\t</div>
+\t\t\t<br>
+\t\t\t<form class=\"input-group mb-3\" method=\"post\" action=\"find\">
+\t\t\t\t<input type=\"search\" class=\"form-control rounded\" id=\"name\" placeholder=\"Nom cours\" name=\"name\"/>
+\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\" value=\"search\">
+\t\t\t\t\t<i class=\"fas fa-search\"></i>
+\t\t\t\t\tChercher
+\t\t\t\t</button>
+
+
+\t\t\t</form>
 \t\t\t<div class=\"container-fluid\">
 
 \t\t\t\t<div class=\"row\">

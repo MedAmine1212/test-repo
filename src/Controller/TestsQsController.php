@@ -82,4 +82,23 @@ class TestsQsController extends AbstractController
         ]);
     }
 
+    #[Route('/findQuestion', name: 'findQuestion')]
+    public function searchQuestionByCourseName(TestQsRepository $rep,Request $request): Response
+    {
+        $name=$request->get('name');
+        $result =  $rep->findQuestionsByCourseName($name);
+        
+        if($request->isMethod("post") && count($result)!=0){
+            
+            return $this->render('tests_qs/questionsList.html.twig',[
+                'questions'=>$result,
+            ]);
+        }
+
+        return $this->render('tests_qs/questionsList.html.twig', [
+            'questions' => $rep->findAll(),
+        ]);
+
+    }
+
 }

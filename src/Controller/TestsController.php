@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class TestsController extends AbstractController
 {
@@ -142,11 +143,13 @@ public function update(ManagerRegistry $mr, Request $req, $id): Response
         $test = new Tests();
         $testQuestions = $this->testQuestions($rep,$id);
         $nbQuestion = count($testQuestions);
+        $score=0;
 
          return $this->render('passage_test/quiz.html.twig', [
             'test' => $test = $rep->find($id),
             'q' => $testQuestions,
             'nb_questions'=> $nbQuestion,
+            'score' => $score,
         ]);
     }
 
@@ -163,6 +166,74 @@ public function update(ManagerRegistry $mr, Request $req, $id): Response
          return $this->render('passage_test/tests.html.twig', [
             'user_tests' => $rep->findAll(),
         ]);
+    }
+
+    #[Route('/find', name: 'find')]
+    public function searchTestByCourseName(TestsRepository $rep, Request $request): Response
+    {
+        $name=$request->get('name');
+        $result =  $rep->findTestByCourseName($name);
+        
+        if($request->isMethod("post") && count($result)!=0){
+            
+            return $this->render('tests/tests_list.html.twig',[
+                'tests'=>$result,
+            ]);
+        }
+
+        return $this->render('tests/tests_list.html.twig', [
+            'tests' => $rep->findAll(),
+        ]);
+
+    }
+
+
+    // #[Route('/getScore', name: 'getScore')]
+    // public function getScore(Request $request): Response
+    // {
+    //     $payload = json_decode($request->getContent(), true);
+    //     $myValue = $payload['score'];
+
+    //     return $this->render('dummy.html.twig',[
+    //         'val'=>$myValue,
+    //     ]);
+    // }
+
+
+    #[Route('/check/{id}', name: 'check')]
+    public function action(Request $request,$id,TestsRepository $rep,SerializerInterface $serializer): Response
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $query = $entityManager
+        ->createQuery('SELECT q FROM App\Entity\TestQs q JOIN q.test t WHERE t.id = :id ORDER BY q.questionNumber ASC')
+        ->setParameter('id', $id);
+
+        $questions = $query->getResult();
+
+        // Serialize the questions and exclude the circular reference entity from serialization
+        $data = $serializer->serialize($questions, 'json', ['groups' => ['exclude_circular_reference']]);
+        
+        $testQuestions = json_decode($data, true);
+
+        // $testQuestions = $rep->findBy(["id_test" => $id]);
+        // $testQuestions = $this->testQuestions($rep,$id);
+
+        return $this->json(['nbCorrectOption'=>$testQuestions],200);
+        $nbCorrectOption=count($testQuestions);
+        $responses=$request->get('responses');
+        foreach($testQuestions as $testQuestion){
+            for($i=0 ; $i<count($responses) ;$i++){
+                if(reponses[i]["id"] == $testQuestion->id){
+                    if(reponses[i]["value"]!=$testQuestion->correctOption){
+                        $nbCorrectOption--;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        // return $this->json(['nbCorrectOption'=>$nbCorrectOption],200);
     }
 
 

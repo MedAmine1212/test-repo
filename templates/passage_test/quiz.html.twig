@@ -18,6 +18,7 @@
 							<div class="timer">Temps restant :
 								<li class="fs-3 text-danger" style="list-style-type: none;" id="countdown" value={{test.duration}}>{{test.duration}}:00</li>
 							</div>
+							<input hidden type="text" id="testId" value={{test.id}}>
 							<br>
 						</div>
 						{% for i in 0..q|length-1 %}
@@ -27,24 +28,25 @@
 									<div class="list-group list-group-flush ">
 										<label class="fw-semibold fs-4" for="question">{{q[i].question}}</label>
 										<br>
+
 										<div class="radio list-group-item">
-											<input class="form-check-input" type="radio" name="question{{i}}" value={{q[i].optiona}}>
+											<input id="{{q[i].id}}" class="form-check-input" type="radio" name="question{{i}}" value="{{q[i].optiona}}">
 											<label class="form-check-label">{{q[i].optiona}}</label>
 										</div>
 										<div class="radio list-group-item">
-											<input class="form-check-input" type="radio" name="question{{i}}" value={{q[i].optionb}}>
+											<input id="{{q[i].id}}" class="form-check-input" type="radio" name="question{{i}}" value="{{q[i].optionb}}">
 											<label class="form-check-label">{{q[i].optionb}}</label>
 										</div>
 										<div class="radio list-group-item">
-											<input class="form-check-input" type="radio" name="question{{i}}" value={{q[i].optionc}}>
+											<input id="{{q[i].id}}" class="form-check-input" type="radio" name="question{{i}}" value="{{q[i].optionc}}">
 											<label class="form-check-label">{{q[i].optionc}}</label>
 										</div>
 										<div class="radio list-group-item">
-											<input class="form-check-input" type="radio" name="question{{i}}" value={{q[i].optiond}}>
+											<input id="{{q[i].id}}" class="form-check-input" type="radio" name="question{{i}}" value="{{q[i].optiond}}">
 											<label class="form-check-label">{{q[i].optiond}}</label>
 										</div>
 										<div class="radio">
-											<label hidden><input type="radio" name="question{{i}}" value={{q[i].correctOption}} id="correctOption">{{q[i].correctOption}}</label>
+											<label hidden><input type="radio" name="question{{i}}" value="{{q[i].correctOption}}" id="correctOption">{{q[i].correctOption}}</label>
 										</div>
 									</div>
 								</div>
@@ -74,8 +76,10 @@
 						<p>Félicitations pour avoir terminé le test !</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-danger  col-6 mx-auto" data-bs-dismiss="modal" onclick="redirect()">Quitter</button>
-						<button type="button" class="btn btn-primary col-6 mx-auto ">Imprimer</button>
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="redirect()">Quitter</button>
+						<a href="{{path('resultDownload')}}">
+							<button type="button" class="btn btn-primary ">Imprimer</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -115,26 +119,42 @@ event.preventDefault()
 
 let score = 0;
 let radioCount = 0;
-
+// nombre des questions
 let nbQuestionsEl = document.getElementById('nb_questions');
 let nbQuestions = parseInt(nbQuestionsEl.getAttribute('data-nb'));
+
+// les réponses correctes
+let correctOptions = document.querySelectorAll('input[id="correctOption"]');
+
+let limit = nbQuestions;
+let finishBtn = document.getElementById("btn");
+
 console.log(nbQuestions);
 
 
 function terminer_test() {
+var modal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
+// valeurs selectionnées
+let selectedValues = document.querySelectorAll('input[type="radio"]:checked');
+let selectedValuesArray = Array.from(selectedValues)
 
-const limit = nbQuestions;
-const finishBtn = document.getElementById("btn");
-const correctOptions = document.querySelectorAll('input[id="correctOption"]');
-var selectedValues = document.querySelectorAll('input[type="radio"]:checked');
-var checkbtn = document.querySelectorAll('input[type="radio"]');
+let correctOptionsArray = Array.from(correctOptions)
 
-selectedValues.forEach(selectedValue => {
-correctOptions.forEach(option => {
 
-if (selectedValue.value.toString() === option.value.toString()) 
+if (selectedValues.length != nbQuestions) 
+
+toggleErrorModal()
+
+
+
+
+
+for (let i = 0; i < nbQuestions; i++) {
+if (selectedValuesArray[i].value.toString() === correctOptionsArray[i].value.toString()) {
+console.log(selectedValuesArray[i].value)
+console.log(correctOptionsArray[i].value)
 score++;
-
+}
 
 
 if (score > limit) 
@@ -142,48 +162,52 @@ score = limit;
 
 
 
-})
-
-});
-
-checkbtn.forEach((btn) => {
-if (btn.checked) {
-radioCount++;
-if (radioCount > limit) 
-radioCount = limit;
-
-
-
 }
 
+$
+let responses = [];
+for (let i = 0; i < selectedValuesArray.length; i++) {
+console.log(selectedValuesArray[i].id)
+responses[i] = {
+id: selectedValuesArray[i].id,
+value: selectedValuesArray[i].value
+}
+}
 
-});
+console.log(document.getElementById('testId').value)
+console.log(responses)
 
-if (radioCount === nbQuestions) {
+
+if (selectedValues.length === nbQuestions) { /*
 finishBtn.setAttribute('data-bs-toggle', 'modal');
-finishBtn.setAttribute('data-bs-target', '#staticBackdrop');
-}
-console.log(nbQuestions)
-console.log('score' + score);
-console.log('selected' + radioCount);
-
-var modal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
-if (radioCount === nbQuestions)  // all the questions are answered
+finishBtn.setAttribute('data-bs-target', '#staticBackdrop'); */
+$.post('/check/' + document.getElementById('testId').value, responses).then(function (res) {
+console.log(res)
+var resultText = `Vous avez obtenu une note de ${
+res.nbCorrectOption
+}  sur ${nbQuestions}`;
+document.getElementById('nb_questions').innerHTML = resultText;
 modal.toggle();
- else 
-toggleErrorModal()
+}).fail(function (error) { // Error code here
+console.log('Error: ' + error.responseText);
+});
 
 
+}
+
+/*
+console.log(selectedValues)
 
 
-
+// affichage message résultat
 var resultText = `Vous avez obtenu une note de ${score}  sur ${nbQuestions}`
 document.getElementById('nb_questions').innerHTML = resultText;
+*/
 
 }
 
 function redirect() {
-const newPageUrl = '{{ path('getUserTests') }}';
+let newPageUrl = '{{ path('getUserTests') }}';
 window.location.href = newPageUrl;
 }
 

@@ -113,7 +113,20 @@ class __TwigTemplate_e7b0ae69eda5dbeace65c9496620acda extends Template
         echo "\" class=\"btn btn-primary\">
 \t\t\t\t\t<i class=\"fas fa-plus\"></i>
 \t\t\t\t\tAjouter une question</a>
+\t\t\t\t<br>
+\t\t\t\t<br>
+\t\t\t\t<form class=\"input-group mb-3\" method=\"post\" action=\"findQuestion\">
+\t\t\t\t\t<input type=\"search\" class=\"form-control rounded\" id=\"name\" placeholder=\"Nom cours\" name=\"name\"/>
+\t\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\" value=\"search\">
+\t\t\t\t\t\t<i class=\"fas fa-search\"></i>
+\t\t\t\t\t\tChercher
+\t\t\t\t\t</button>
+
+
+\t\t\t\t</form>
 \t\t\t</div>
+
+
 \t\t\t<div class=\"container-fluid\">
 
 \t\t\t\t<div class=\"row\">
@@ -138,50 +151,50 @@ class __TwigTemplate_e7b0ae69eda5dbeace65c9496620acda extends Template
 \t\t\t\t\t\t\t\t\t\t\t\t</thead>
 \t\t\t\t\t\t\t\t\t\t\t\t<tbody>
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 53
+        // line 66
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["questions"]) || array_key_exists("questions", $context) ? $context["questions"] : (function () { throw new RuntimeError('Variable "questions" does not exist.', 53, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["questions"]) || array_key_exists("questions", $context) ? $context["questions"] : (function () { throw new RuntimeError('Variable "questions" does not exist.', 66, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 54
+            // line 67
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "questionNumber", [], "any", false, false, false, 55), "html", null, true);
+            // line 68
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "questionNumber", [], "any", false, false, false, 68), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optiona", [], "any", false, false, false, 56), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optiona", [], "any", false, false, false, 69), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optionb", [], "any", false, false, false, 57), "html", null, true);
+            // line 70
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optionb", [], "any", false, false, false, 70), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 58
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optionc", [], "any", false, false, false, 58), "html", null, true);
+            // line 71
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optionc", [], "any", false, false, false, 71), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 59
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optiond", [], "any", false, false, false, 59), "html", null, true);
+            // line 72
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "optiond", [], "any", false, false, false, 72), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 60
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "correctOption", [], "any", false, false, false, 60), "html", null, true);
+            // line 73
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "correctOption", [], "any", false, false, false, 73), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>";
-            // line 61
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "question", [], "any", false, false, false, 61), "html", null, true);
+            // line 74
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["i"], "question", [], "any", false, false, false, 74), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 63
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateQuestion", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 63)]), "html", null, true);
+            // line 76
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateQuestion", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 76)]), "html", null, true);
             echo "\" class=\"btn btn-success\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-edit\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 66
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteQuestion", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 66)]), "html", null, true);
+            // line 79
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteQuestion", ["id" => twig_get_attribute($this->env, $this->source, $context["i"], "id", [], "any", false, false, false, 79)]), "html", null, true);
             echo "\" class=\"btn btn-danger\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"far fa-trash-alt\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
@@ -192,7 +205,7 @@ class __TwigTemplate_e7b0ae69eda5dbeace65c9496620acda extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 72
+        // line 85
         echo "\t\t\t\t\t\t\t\t\t\t\t\t</tbody>
 \t\t\t\t\t\t\t\t\t\t\t</table>
 \t\t\t\t\t\t\t\t\t\t</div>
@@ -232,7 +245,7 @@ class __TwigTemplate_e7b0ae69eda5dbeace65c9496620acda extends Template
 
     public function getDebugInfo()
     {
-        return array (  196 => 72,  184 => 66,  178 => 63,  173 => 61,  169 => 60,  165 => 59,  161 => 58,  157 => 57,  153 => 56,  149 => 55,  146 => 54,  142 => 53,  112 => 26,  92 => 8,  82 => 7,  69 => 3,  59 => 2,  36 => 1,);
+        return array (  209 => 85,  197 => 79,  191 => 76,  186 => 74,  182 => 73,  178 => 72,  174 => 71,  170 => 70,  166 => 69,  162 => 68,  159 => 67,  155 => 66,  112 => 26,  92 => 8,  82 => 7,  69 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -265,7 +278,20 @@ class __TwigTemplate_e7b0ae69eda5dbeace65c9496620acda extends Template
 \t\t\t\t<div class=\"btn-container\"> <a href=\"{{path('addQuestion')}}\" class=\"btn btn-primary\">
 \t\t\t\t\t<i class=\"fas fa-plus\"></i>
 \t\t\t\t\tAjouter une question</a>
+\t\t\t\t<br>
+\t\t\t\t<br>
+\t\t\t\t<form class=\"input-group mb-3\" method=\"post\" action=\"findQuestion\">
+\t\t\t\t\t<input type=\"search\" class=\"form-control rounded\" id=\"name\" placeholder=\"Nom cours\" name=\"name\"/>
+\t\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\" value=\"search\">
+\t\t\t\t\t\t<i class=\"fas fa-search\"></i>
+\t\t\t\t\t\tChercher
+\t\t\t\t\t</button>
+
+
+\t\t\t\t</form>
 \t\t\t</div>
+
+
 \t\t\t<div class=\"container-fluid\">
 
 \t\t\t\t<div class=\"row\">

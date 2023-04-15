@@ -35,7 +35,7 @@ class Tests extends \App\Entity\Tests implements \Doctrine\ORM\Proxy\Proxy
      * @var array<string, null> properties to be lazy loaded, indexed by property name
      */
     public static $lazyPropertiesNames = array (
-  'questions' => NULL,
+  'testQs' => NULL,
 );
 
     /**
@@ -50,7 +50,7 @@ class Tests extends \App\Entity\Tests implements \Doctrine\ORM\Proxy\Proxy
 
     public function __construct(?\Closure $initializer = null, ?\Closure $cloner = null)
     {
-        unset($this->questions);
+        unset($this->testQs);
 
         $this->__initializer__ = $initializer;
         $this->__cloner__      = $cloner;
@@ -112,10 +112,10 @@ class Tests extends \App\Entity\Tests implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'type', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'minPoints', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'duration', 'questions'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'type', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'minPoints', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'duration', 'testQs', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'subject', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'result', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'course'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'type', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'minPoints', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'duration'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'type', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'minPoints', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'duration', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'subject', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'result', '' . "\0" . 'App\\Entity\\Tests' . "\0" . 'course'];
     }
 
     /**
@@ -137,7 +137,7 @@ class Tests extends \App\Entity\Tests implements \Doctrine\ORM\Proxy\Proxy
                 }
             };
 
-            unset($this->questions);
+            unset($this->testQs);
         }
     }
 
@@ -248,12 +248,12 @@ class Tests extends \App\Entity\Tests implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function removeQuestion(\App\Entity\TestQs $question): \App\Entity\Tests
+    public function removeQuestion(\App\Entity\TestQs $testQs): \App\Entity\Tests
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeQuestion', [$question]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeQuestion', [$testQs]);
 
-        return parent::removeQuestion($question);
+        return parent::removeQuestion($testQs);
     }
 
     /**

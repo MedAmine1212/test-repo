@@ -85,8 +85,9 @@ class TestQs
     #[Assert\NotBlank(message:"Veuillez saisir la question.")]
     private ?string $question = null;
 
-    #[ORM\ManyToOne(targetEntity: Tests::class, inversedBy:'testqs')]
-    #[ORM\JoinColumn(referencedColumnName:"id", nullable: false)]
+    #[ORM\ManyToOne(targetEntity: Tests::class, inversedBy: 'testQs', fetch:'LAZY')]
+    #[ORM\JoinColumn(name:'id_test' , referencedColumnName:'id', nullable: false)]
+    #[Groups('exclude_circular_reference')]
     public $test;
 
     public function getId(): ?int
@@ -184,6 +185,18 @@ class TestQs
     }
 
     public function setIdTest(?Tests $test): self
+    {
+        $this->test = $test;
+
+        return $this;
+    }
+
+    public function getTest(): ?Tests
+    {
+        return $this->test;
+    }
+
+    public function setTest(?Tests $test): self
     {
         $this->test = $test;
 

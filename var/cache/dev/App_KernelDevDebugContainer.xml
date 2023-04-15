@@ -330,11 +330,101 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Components\BackToTopComponent" class="App\Components\BackToTopComponent" autowire="true" autoconfigure="true"/>
+    <service id="App\Components\NavComponent" class="App\Components\NavComponent" autowire="true" autoconfigure="true"/>
+    <service id="App\Components\SeperatorComponent" class="App\Components\SeperatorComponent" autowire="true" autoconfigure="true"/>
+    <service id="App\Components\SessionCardComponent" class="App\Components\SessionCardComponent" autowire="true" autoconfigure="true"/>
+    <service id="App\Components\SessionFormComponent" class="App\Components\SessionFormComponent" autowire="true" autoconfigure="true"/>
+    <service id="App\Components\SessionsFilterComponent" class="App\Components\SessionsFilterComponent" autowire="true" autoconfigure="true"/>
+    <service id="App\Components\SessionsResultDisplaySettingsController" class="App\Components\SessionsResultDisplaySettingsController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\AppController" class="App\Controller\AppController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\AppController"/>
+      </call>
+    </service>
+    <service id="App\Controller\AuthController" class="App\Controller\AuthController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\AuthController"/>
+      </call>
+    </service>
+    <service id="App\Controller\CoursesListController" class="App\Controller\CoursesListController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\CoursesListController"/>
+      </call>
+    </service>
+    <service id="App\Controller\CoursesTableController" class="App\Controller\CoursesTableController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\QuestionController" class="App\Controller\QuestionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\QuestionController"/>
+      </call>
+    </service>
+    <service id="App\Controller\QuestionsListController" class="App\Controller\QuestionsListController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\QuestionsListController"/>
+      </call>
+    </service>
+    <service id="App\Controller\SessionController" class="App\Controller\SessionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\SessionsRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SessionController"/>
+      </call>
+    </service>
+    <service id="App\Controller\SessionsListController" class="App\Controller\SessionsListController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\SessionsRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SessionsListController"/>
+      </call>
+    </service>
+    <service id="App\Controller\SubjectsListController" class="App\Controller\SubjectsListController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SubjectsListController"/>
+      </call>
+    </service>
+    <service id="App\Controller\TestController" class="App\Controller\TestController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\TestController"/>
+      </call>
+    </service>
+    <service id="App\Controller\TestResultController" class="App\Controller\TestResultController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\TestResultController"/>
+      </call>
+    </service>
     <service id="App\Controller\TestsController" class="App\Controller\TestsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\TestsController"/>
+      </call>
+    </service>
+    <service id="App\Controller\TestsListController" class="App\Controller\TestsListController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\TestsListController"/>
       </call>
     </service>
     <service id="App\Controller\TestsQsController" class="App\Controller\TestsQsController" public="true" autowire="true" autoconfigure="true">
@@ -344,17 +434,68 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\TestsQsController"/>
       </call>
     </service>
+    <service id="App\Controller\TestsTableController" class="App\Controller\TestsTableController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\UserController" class="App\Controller\UserController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\UserController"/>
+      </call>
+    </service>
+    <service id="App\Controller\subjectsTableController" class="App\Controller\subjectsTableController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\usersTableController" class="App\Controller\usersTableController" autowire="true" autoconfigure="true"/>
     <service id="App\Form\TestQsType" class="App\Form\TestQsType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\TestsType" class="App\Form\TestsType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\CoursesRepository" class="App\Repository\CoursesRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ParticipationsRepository" class="App\Repository\ParticipationsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ResourcesRepository" class="App\Repository\ResourcesRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\SessionsRepository" class="App\Repository\SessionsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\SubjectsRepository" class="App\Repository\SubjectsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\TestQsRepository" class="App\Repository\TestQsRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\TestResultsRepository" class="App\Repository\TestResultsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\TestsRepository" class="App\Repository\TestsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="service" id="serializer"/>
+    </service>
+    <service id="App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\VotesRepository" class="App\Repository\VotesRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -4163,7 +4304,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.DEv0Uuc"/>
+      <argument type="service" id=".service_locator.xG3T4dM"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6117,20 +6258,76 @@
     <service id="framework_extra_bundle.argument_name_convertor" class="Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter">
       <argument type="service" id="argument_metadata_factory"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AppController" class="App\Controller\AppController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AppController" class="App\Controller\AppController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AppController" class="App\Controller\AppController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AuthController" class="App\Controller\AuthController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AuthController" class="App\Controller\AuthController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AuthController" class="App\Controller\AuthController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CoursesListController" class="App\Controller\CoursesListController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CoursesListController" class="App\Controller\CoursesListController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CoursesListController" class="App\Controller\CoursesListController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\QuestionController" class="App\Controller\QuestionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\QuestionController" class="App\Controller\QuestionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\QuestionController" class="App\Controller\QuestionController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\QuestionsListController" class="App\Controller\QuestionsListController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\QuestionsListController" class="App\Controller\QuestionsListController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\QuestionsListController" class="App\Controller\QuestionsListController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SessionController" class="App\Controller\SessionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SessionController" class="App\Controller\SessionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SessionController" class="App\Controller\SessionController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SessionsListController" class="App\Controller\SessionsListController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SessionsListController" class="App\Controller\SessionsListController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SessionsListController" class="App\Controller\SessionsListController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SubjectsListController" class="App\Controller\SubjectsListController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SubjectsListController" class="App\Controller\SubjectsListController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SubjectsListController" class="App\Controller\SubjectsListController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\TestController" class="App\Controller\TestController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestResultController" class="App\Controller\TestResultController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestResultController" class="App\Controller\TestResultController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\TestResultController" class="App\Controller\TestResultController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestsController" class="App\Controller\TestsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestsController" class="App\Controller\TestsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TestsController" class="App\Controller\TestsController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestsListController" class="App\Controller\TestsListController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestsListController" class="App\Controller\TestsListController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\TestsListController" class="App\Controller\TestsListController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestsQsController" class="App\Controller\TestsQsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestsQsController" class="App\Controller\TestsQsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TestsQsController" class="App\Controller\TestsQsController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TestQsType" class="App\Form\TestQsType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\TestQsType" class="App\Form\TestQsType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TestsType" class="App\Form\TestsType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\TestsType" class="App\Form\TestsType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CoursesRepository" class="App\Repository\CoursesRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CoursesRepository" class="App\Repository\CoursesRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ParticipationsRepository" class="App\Repository\ParticipationsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ParticipationsRepository" class="App\Repository\ParticipationsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ResourcesRepository" class="App\Repository\ResourcesRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ResourcesRepository" class="App\Repository\ResourcesRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SessionsRepository" class="App\Repository\SessionsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SessionsRepository" class="App\Repository\SessionsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SubjectsRepository" class="App\Repository\SubjectsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SubjectsRepository" class="App\Repository\SubjectsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TestQsRepository" class="App\Repository\TestQsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\TestQsRepository" class="App\Repository\TestQsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TestResultsRepository" class="App\Repository\TestResultsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\TestResultsRepository" class="App\Repository\TestResultsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TestsRepository" class="App\Repository\TestsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\TestsRepository" class="App\Repository\TestsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\VotesRepository" class="App\Repository\VotesRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\VotesRepository" class="App\Repository\VotesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6466,6 +6663,12 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.vQsrqwy" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\TestResultsRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.SkCPuRG" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6491,6 +6694,13 @@
         <argument key="test" type="service_closure" id=".errored..service_locator..l7u2Le.App\Entity\Tests"/>
       </argument>
     </service>
+    <service id=".service_locator.pWppi7D" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rep" type="service_closure" id="App\Repository\TestsRepository"/>
+        <argument key="serializer" type="service_closure" id="serializer"/>
+      </argument>
+    </service>
     <service id=".service_locator.11AyntU" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6510,36 +6720,46 @@
         <argument key="question" type="service_closure" id=".errored..service_locator.KQ9CXi_.App\Entity\TestQs"/>
       </argument>
     </service>
-    <service id=".service_locator.Eop_.xW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.JTN8nbL" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\TestResultController::resultData" type="service_closure" id=".service_locator.vQsrqwy"/>
+        <argument key="App\Controller\TestResultController::resultDataDowload" type="service_closure" id=".service_locator.vQsrqwy"/>
+        <argument key="App\Controller\TestsController::action" type="service_closure" id=".service_locator.pWppi7D"/>
         <argument key="App\Controller\TestsController::add" type="service_closure" id=".service_locator.M.t6hMj"/>
         <argument key="App\Controller\TestsController::delete" type="service_closure" id=".service_locator..l7u2Le"/>
         <argument key="App\Controller\TestsController::getAll" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController::getAllUser" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController::getTestById" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController::home" type="service_closure" id=".service_locator.SkCPuRG"/>
+        <argument key="App\Controller\TestsController::searchTestByCourseName" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController::testQuestions" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController::update" type="service_closure" id=".service_locator.v_7Kktc"/>
         <argument key="App\Controller\TestsQsController::add" type="service_closure" id=".service_locator.7WFzSkd"/>
         <argument key="App\Controller\TestsQsController::delete" type="service_closure" id=".service_locator.KQ9CXi_"/>
         <argument key="App\Controller\TestsQsController::getAll" type="service_closure" id=".service_locator.11AyntU"/>
+        <argument key="App\Controller\TestsQsController::searchQuestionByCourseName" type="service_closure" id=".service_locator.11AyntU"/>
         <argument key="App\Controller\TestsQsController::update" type="service_closure" id=".service_locator.v_7Kktc"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
+        <argument key="App\Controller\TestResultController:resultData" type="service_closure" id=".service_locator.vQsrqwy"/>
+        <argument key="App\Controller\TestResultController:resultDataDowload" type="service_closure" id=".service_locator.vQsrqwy"/>
+        <argument key="App\Controller\TestsController:action" type="service_closure" id=".service_locator.pWppi7D"/>
         <argument key="App\Controller\TestsController:add" type="service_closure" id=".service_locator.M.t6hMj"/>
         <argument key="App\Controller\TestsController:delete" type="service_closure" id=".service_locator..l7u2Le"/>
         <argument key="App\Controller\TestsController:getAll" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController:getAllUser" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController:getTestById" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController:home" type="service_closure" id=".service_locator.SkCPuRG"/>
+        <argument key="App\Controller\TestsController:searchTestByCourseName" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController:testQuestions" type="service_closure" id=".service_locator.SkCPuRG"/>
         <argument key="App\Controller\TestsController:update" type="service_closure" id=".service_locator.v_7Kktc"/>
         <argument key="App\Controller\TestsQsController:add" type="service_closure" id=".service_locator.7WFzSkd"/>
         <argument key="App\Controller\TestsQsController:delete" type="service_closure" id=".service_locator.KQ9CXi_"/>
         <argument key="App\Controller\TestsQsController:getAll" type="service_closure" id=".service_locator.11AyntU"/>
+        <argument key="App\Controller\TestsQsController:searchQuestionByCourseName" type="service_closure" id=".service_locator.11AyntU"/>
         <argument key="App\Controller\TestsQsController:update" type="service_closure" id=".service_locator.v_7Kktc"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
@@ -6694,11 +6914,21 @@
         <argument key="doctrine.orm.messenger.doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.DEv0Uuc" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.xG3T4dM" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\AnswersRepository" type="service_closure" id="App\Repository\AnswersRepository"/>
+        <argument key="App\Repository\CoursesRepository" type="service_closure" id="App\Repository\CoursesRepository"/>
+        <argument key="App\Repository\ParticipationsRepository" type="service_closure" id="App\Repository\ParticipationsRepository"/>
+        <argument key="App\Repository\QuestionsRepository" type="service_closure" id="App\Repository\QuestionsRepository"/>
+        <argument key="App\Repository\ResourcesRepository" type="service_closure" id="App\Repository\ResourcesRepository"/>
+        <argument key="App\Repository\SessionsRepository" type="service_closure" id="App\Repository\SessionsRepository"/>
+        <argument key="App\Repository\SubjectsRepository" type="service_closure" id="App\Repository\SubjectsRepository"/>
         <argument key="App\Repository\TestQsRepository" type="service_closure" id="App\Repository\TestQsRepository"/>
+        <argument key="App\Repository\TestResultsRepository" type="service_closure" id="App\Repository\TestResultsRepository"/>
         <argument key="App\Repository\TestsRepository" type="service_closure" id="App\Repository\TestsRepository"/>
+        <argument key="App\Repository\UsersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
+        <argument key="App\Repository\VotesRepository" type="service_closure" id="App\Repository\VotesRepository"/>
       </argument>
     </service>
     <service id=".service_locator.KLVvNIq" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6967,15 +7197,87 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\AppController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AppController"/>
+      <argument>App\Controller\AppController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\AuthController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AuthController"/>
+      <argument>App\Controller\AuthController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\CoursesListController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CoursesListController"/>
+      <argument>App\Controller\CoursesListController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\QuestionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\QuestionController"/>
+      <argument>App\Controller\QuestionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\QuestionsListController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\QuestionsListController"/>
+      <argument>App\Controller\QuestionsListController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\SessionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SessionController"/>
+      <argument>App\Controller\SessionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\SessionsListController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SessionsListController"/>
+      <argument>App\Controller\SessionsListController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\SubjectsListController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SubjectsListController"/>
+      <argument>App\Controller\SubjectsListController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\TestController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\TestController"/>
+      <argument>App\Controller\TestController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\TestResultController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\TestResultController"/>
+      <argument>App\Controller\TestResultController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\TestsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\TestsController"/>
       <argument>App\Controller\TestsController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\TestsListController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\TestsListController"/>
+      <argument>App\Controller\TestsListController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\TestsQsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\TestsQsController"/>
       <argument>App\Controller\TestsQsController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\UserController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\UserController"/>
+      <argument>App\Controller\UserController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
@@ -7161,12 +7463,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.Eop_.xW"/>
+      <argument type="service" id=".service_locator.JTN8nbL"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.Eop_.xW"/>
+      <argument type="service" id=".service_locator.JTN8nbL"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8132,7 +8434,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Eop_.xW"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.JTN8nbL"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -8158,7 +8460,7 @@
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.vTp79aI" alias=".service_locator.M.t6hMj"/>
     <service id=".service_locator.eMlcfq9" alias=".service_locator.7WFzSkd"/>
-    <service id=".service_locator._7WdpIx" alias=".service_locator.Eop_.xW"/>
+    <service id=".service_locator.NaskKGF" alias=".service_locator.JTN8nbL"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.uOlurN3" alias=".service_locator.WoGFeMS"/>
     <service id=".service_locator.nk0lT0X" alias=".service_locator.1kmbKC8"/>
@@ -8186,10 +8488,12 @@
     <service id="messenger.bus.default" alias="debug.traced.messenger.bus.default"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.uo5c0SP" alias=".service_locator.xUrKPVU"/>
+    <service id=".service_locator.Den_5UD" alias=".service_locator.vQsrqwy"/>
     <service id=".service_locator.TOJeGAA" alias=".service_locator.SkCPuRG"/>
     <service id=".service_locator.4flTV2q" alias=".service_locator.M.t6hMj"/>
     <service id=".service_locator.JyGm4gK" alias=".service_locator.v_7Kktc"/>
     <service id=".service_locator.84ph6ZG" alias=".service_locator..l7u2Le"/>
+    <service id=".service_locator.tR6Qwe9" alias=".service_locator.pWppi7D"/>
     <service id=".service_locator.mhg8eK6" alias=".service_locator.11AyntU"/>
     <service id=".service_locator.WrL9DI_" alias=".service_locator.7WFzSkd"/>
     <service id=".service_locator.ezWEs9i" alias=".service_locator.KQ9CXi_"/>

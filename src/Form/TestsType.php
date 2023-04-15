@@ -15,9 +15,7 @@ class TestsType extends AbstractType
         $builder
             ->add('type', ChoiceType::class, [
                 'choices' => [
-                    '' => '',
-                    'Cours' => "Cours",
-                    'Matière' => "Matière",
+                    'Cours' => "COURSE",
                 ],
                 ])
             ->add('minPoints', options:[
